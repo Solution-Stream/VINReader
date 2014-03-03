@@ -14,13 +14,13 @@
 		AA4DCE3618C500070054D1CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DCE3518C500070054D1CA /* main.m */; };
 		AA4DCE3A18C500070054D1CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DCE3918C500070054D1CA /* AppDelegate.m */; };
 		AA4DCE3D18C500070054D1CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4DCE3B18C500070054D1CA /* Main.storyboard */; };
-		AA4DCE4018C500070054D1CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DCE3F18C500070054D1CA /* ViewController.m */; };
 		AA4DCE4218C500070054D1CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4DCE4118C500070054D1CA /* Images.xcassets */; };
 		AA4DCE4918C500070054D1CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4DCE4818C500070054D1CA /* XCTest.framework */; };
 		AA4DCE4A18C500070054D1CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4DCE2918C500070054D1CA /* Foundation.framework */; };
 		AA4DCE4B18C500070054D1CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4DCE2D18C500070054D1CA /* UIKit.framework */; };
 		AA4DCE5318C500070054D1CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA4DCE5118C500070054D1CA /* InfoPlist.strings */; };
 		AA4DCE5518C500070054D1CA /* VinReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DCE5418C500070054D1CA /* VinReaderTests.m */; };
+		AA4DCE6018C5206A0054D1CA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4DCE5F18C5206A0054D1CA /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +45,14 @@
 		AA4DCE3818C500070054D1CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA4DCE3918C500070054D1CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AA4DCE3C18C500070054D1CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AA4DCE3E18C500070054D1CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AA4DCE3F18C500070054D1CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AA4DCE4118C500070054D1CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA4DCE4718C500070054D1CA /* VinReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4DCE4818C500070054D1CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AA4DCE5018C500070054D1CA /* VinReaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VinReaderTests-Info.plist"; sourceTree = "<group>"; };
 		AA4DCE5218C500070054D1CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA4DCE5418C500070054D1CA /* VinReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VinReaderTests.m; sourceTree = "<group>"; };
+		AA4DCE5E18C5206A0054D1CA /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		AA4DCE5F18C5206A0054D1CA /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +115,10 @@
 				AA4DCE3818C500070054D1CA /* AppDelegate.h */,
 				AA4DCE3918C500070054D1CA /* AppDelegate.m */,
 				AA4DCE3B18C500070054D1CA /* Main.storyboard */,
-				AA4DCE3E18C500070054D1CA /* ViewController.h */,
-				AA4DCE3F18C500070054D1CA /* ViewController.m */,
 				AA4DCE4118C500070054D1CA /* Images.xcassets */,
 				AA4DCE3018C500070054D1CA /* Supporting Files */,
+				AA4DCE5E18C5206A0054D1CA /* CameraViewController.h */,
+				AA4DCE5F18C5206A0054D1CA /* CameraViewController.m */,
 			);
 			path = VinReader;
 			sourceTree = "<group>";
@@ -252,7 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4DCE4018C500070054D1CA /* ViewController.m in Sources */,
+				AA4DCE6018C5206A0054D1CA /* CameraViewController.m in Sources */,
 				AA4DCE3A18C500070054D1CA /* AppDelegate.m in Sources */,
 				AA4DCE3618C500070054D1CA /* main.m in Sources */,
 			);
