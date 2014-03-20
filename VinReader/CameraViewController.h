@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "VinObject.h"
 
 @interface CameraViewController : UIViewController
 
