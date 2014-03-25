@@ -14,9 +14,12 @@
 
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 - (BOOL) startReading;
 - (void) stopReading;
+- (void) loadBeepSound;
+
 @end
 
 @implementation BarCodeViewController
@@ -39,6 +42,8 @@
     
     _captureSession = nil;
     
+    [self loadBeepSound];
+    
        // Do any additional setup after loading the view.
 }
 
@@ -48,14 +53,17 @@
         if ([self startReading]){
             [_bbitemStart setTitle:@"Stop"];
             [_lblStatus setText:@"Scanning for BarCode..."];
+            [_lblPrompt setText:@"|--------------------------------------|"];
         }
-        else{
-            [self stopReading];
-            [_bbitemStart setTitle:@"Start!"];
-        }
-        
-        _isReading = !_isReading;
     }
+    else{
+        [self stopReading];
+        [_bbitemStart setTitle:@"Start!"];
+        [_lblPrompt setText:@"Tap on Start! to read a VIN Code"];
+    }
+        
+    _isReading = !_isReading;
+    
 }
 
 - (BOOL)startReading {
@@ -109,9 +117,30 @@
             [_bbitemStart performSelectorOnMainThread:@selector(setTitle:) withObject:@"Start!" waitUntilDone:NO];
             _isReading = NO;
             
+            if (_audioPlayer) {
+                [_audioPlayer play];
+            }
+            
         }
     }
 }
+
+- (void) loadBeepSound {
+    NSString *beepFilePath = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"mp3"];
+    NSURL *beepURL = [NSURL URLWithString:beepFilePath];
+    NSError *error;
+    
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:beepURL error:&error];
+    if (error) {
+        NSLog(@"Could not play beep file.");
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    else {
+        [_audioPlayer prepareToPlay];
+    }
+        
+}
+
 
 - (IBAction)scanButtonTapped:(id)sender{
     NSLog(@"TBD: scan barcode here...");
