@@ -59,6 +59,7 @@
     else{
         [self stopReading];
         [_bbitemStart setTitle:@"Start!"];
+        [_lblStatus setText:@"Code reader is not running"];
         [_lblPrompt setText:@"Tap on Start! to read a VIN Code"];
     }
         
@@ -120,7 +121,6 @@
             if (_audioPlayer) {
                 [_audioPlayer play];
             }
-            
         }
     }
 }
@@ -138,7 +138,6 @@
     else {
         [_audioPlayer prepareToPlay];
     }
-        
 }
 
 
@@ -153,16 +152,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
+    MainFormViewController *mfvc = [segue destinationViewController];
     // Pass the selected object to the new view controller.
+    
+    // Create a new vin object to pass back to the previous scene
+    VinObject *vin = [[VinObject alloc] init];
+    // Set the vin number on the object
+    // Check for pipe character
+    NSString *capturedVIN = [_lblStatus text];
+    NSString *searchText = @"|";
+    //NSRange *range = [capturedVIN rangeOfString:searchText];
+    if ([capturedVIN rangeOfString:searchText].location == NSNotFound) {
+        capturedVIN = [capturedVIN substringFromIndex:1];
+    }
+    
+    vin.vinNumber = capturedVIN;
+    mfvc.vinObject = vin;
+    
 }
-*/
+
 
 
 @end

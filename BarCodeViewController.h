@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "VinObject.h"
+#import "MainFormViewController.h"
 
 @interface BarCodeViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 

@@ -94,6 +94,16 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yap-8c-0rT"/>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7r-rX-i1n">
+                                <rect key="frame" x="115" y="477" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Insert VIN">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PqP-IJ-aaA" kind="push" id="mZz-UJ-TQ0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -176,6 +186,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VAG-q6-mHB"/>
+                    <connections>
+                        <outlet property="txtVinNumber" destination="rkZ-Ai-c2O" id="6V6-j3-hWo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLq-s0-7Uv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,4 +218,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="mZz-UJ-TQ0"/>
+    </inferredMetricsTieBreakers>
 </document>

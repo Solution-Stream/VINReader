@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "VinObject.h"
+#import "BarCodeViewController.h"
 
 @interface MainFormViewController : UIViewController
+
+@property (nonatomic) VinObject *vinObject;
 
 @end

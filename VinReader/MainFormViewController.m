@@ -9,6 +9,7 @@
 #import "MainFormViewController.h"
 
 @interface MainFormViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *txtVinNumber;
 
 @end
 
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // Check to see if the vinObject is not null
+    if (_vinObject != nil ) {
+        [_txtVinNumber setText:_vinObject.vinNumber];
+    }
 }
 
 - (void)didReceiveMemoryWarning
