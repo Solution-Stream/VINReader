@@ -54,6 +54,7 @@
             [_bbitemStart setTitle:@"Stop"];
             [_lblStatus setText:@"Scanning for BarCode..."];
             [_lblPrompt setText:@"|--------------------------------------|"];
+                       
         }
     }
     else{
