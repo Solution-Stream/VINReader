@@ -153,6 +153,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Prevent autorotation on this view controller
+- (NSUInteger)supportedInterfaceOrientations {
+    return (UIInterfaceOrientationMaskPortrait);
+}
 
 #pragma mark - Navigation
 
@@ -178,6 +182,8 @@
     mfvc.vinObject = vin;
     
 }
+
+
 
 
 
